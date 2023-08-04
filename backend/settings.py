@@ -124,7 +124,11 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "static"
 
 # Directories where Django searches for static files
-STATICFILES_DIRS = ["backend/static", "next_static_folder/static/blablabla"]
+STATICFILES_DIRS = ["backend/static"]
+
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Additional locations the staticfiles app will traverse if the FileSystemFinder finder is enabled, e.g.
 

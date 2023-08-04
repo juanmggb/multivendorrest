@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Employee {{ employee.id }}</h1>
+
+<div class="card mx-auto" style="width: 18rem">
+  <img
+    src="{{ employee.photo.url }}"
+    class="card-img-top"
+    alt="{{ employee.first_name }}"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ employee.first_name }}</h5>
+    <p class="card-text">{{ employee.designation }}</p>
+    <p class="card-text">{{ employee.email_address }}</p>
+    <p class="card-text">{{ employee.phone_number }}</p>
+  </div>
+
+  <a href="{% url 'employee-list' %}" class="btn btn-primary p-2">
+    Bakc to Home</a
+  >
+</div>
+
+{% endblock %}
